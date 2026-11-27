@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stage 3 : Déploiement de postes & GLPI — Portfolio E5</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand">Portfolio E5 <span>• BTS SIO SISR</span></a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-list">
+          <li><a href="../index.html">Accueil & Réalisations</a></li>
+          <li><a href="../competences.html">Tableau C1–C6</a></li>
+          <li><a href="../veille.html">Veille & Projet Pro (C6)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="../index.html">← Retour aux réalisations</a>
+    </nav>
+
+    <article class="fiche">
+      <header class="fiche-header">
+        <span class="context-tag">Stage 3 • Environnement professionnel</span>
+        <h1>Déploiement de postes, création d'un programme d'aide et suivi via GLPI</h1>
+        <div class="comp-tags">
+          <span class="comp">C2 • Répondre aux incidents et aux demandes</span>
+          <span class="comp">C4 • Travailler en mode projet</span>
+          <span class="comp">C5 • Mettre à disposition un service</span>
+        </div>
+      </header>
+
+      <!-- Grille de synthèse Situer / Cadrer / Réaliser / Valider -->
+      <div class="summary-grid">
+        <div class="info-box">
+          <h3>1. Situer (Contexte)</h3>
+          <ul>
+            <li><strong>Cadre :</strong> 3e stage de BTS SIO (SISR)</li>
+            <li><strong>Problématique :</strong> Préparer et livrer des postes homogènes plus rapidement tout en traçant les demandes</li>
+            <li><strong>Mon rôle exact :</strong> Conception de l'outil d'aide, déploiement, tests et clôture des tickets</li>
+          </ul>
+        </div>
+        <div class="info-box">
+          <h3>2. Cadrer (Besoins & Outils)</h3>
+          <ul>
+            <li><strong>Objectif :</strong> Standardiser les étapes post-installation et réduire les oublis manuels</li>
+            <li><strong>Contraintes :</strong> Respect de la politique interne, intégrité des données, délais utilisateurs</li>
+            <li><strong>Outils :</strong> Programme maison (script/utilitaire), GLPI, outils système Windows</li>
+          </ul>
+        </div>
+      </div>
+
+      <section class="fiche-block">
+        <h2>Démarche et actions personnelles réalisées</h2>
+        <ol class="steps-list">
+          <li>
+            <strong>Prise en compte du besoin via GLPI :</strong>
+            Analyse des tickets de demande de mise à disposition ou de renouvellement de poste, priorisation selon l'urgence et suivi du statut jusqu'à la livraison.
+          </li>
+          <li>
+            <strong>Création du programme d'aide au déploiement :</strong>
+            Développement d'un programme permettant d'automatiser les tâches répétitives de préparation (paramétrages standards, vérification des prérequis, installation/configuration de base).
+          </li>
+          <li>
+            <strong>Exécution du déploiement et contrôles :</strong>
+            Application de la procédure sur les postes cibles, vérification de la connectivité réseau, des accès et des logiciels métiers avant remise à l'utilisateur.
+          </li>
+          <li>
+            <strong>Documentation et clôture :</strong>
+            Rédaction d'une procédure de déploiement réutilisable et mise à jour des tickets dans GLPI avec compte-rendu d'intervention.
+          </li>
+        </ol>
+      </section>
+
+      <section class="fiche-block">
+        <h2>Preuves et éléments techniques (anonymisés)</h2>
+        <p class="note">
+          Remplace les blocs d'exemple ci-dessous par tes propres extraits de code, schémas ou captures nettoyés avant mise en ligne.
+        </p>
+
+        <div class="proof-card">
+          <h3>Preuve 1 — Extrait du programme d'aide au déploiement (C4 / C5)</h3>
+          <pre><code>@echo off
+title Assistant de deploiement poste - Version anonymisee
+echo [1/3] Verification des prerequis systeme...
+systeminfo | findstr /B /C:"Nom du systeme" /C:"Version du systeme"
+
+echo [2/3] Application des parametres standards...
+REM Exemple : verification reseau et creation repertoire de logs
+if not exist "C:\Logs_Deploiement" mkdir "C:\Logs_Deploiement"
+ipconfig /all > "C:\Logs_Deploiement\reseau.txt"
+
+echo [3/3] Controle termine. Verifier le journal avant livraison.
+pause</code></pre>
+        </div>
+
+        <div class="proof-grid">
+          <div class="proof-card">
+            <h3>Preuve 2 — Suivi du cycle de vie d'un ticket GLPI (C2)</h3>
+            <div class="placeholder-media" data-preview="Capture GLPI (à ajouter dans assets/img/captures/)">
+              <span>Emplacement capture : <code>../assets/img/captures/glpi-ticket-anonymise.png</code></span>
+            </div>
+            <p class="caption">Illustration de la qualification, du suivi et de la clôture documentée d'une demande de poste.</p>
+          </div>
+
+          <div class="proof-card">
+            <h3>Preuve 3 — Checklist de validation avant remise utilisateur (C5)</h3>
+            <ul class="checklist">
+              <li>Nommage du poste conforme à la charte interne</li>
+              <li>Accès réseau (DHCP/DNS) et domaine opérationnels</li>
+              <li>Applications standards installées et testées</li>
+              <li>Ticket GLPI mis à jour et validé avec l'utilisateur</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="fiche-block">
+        <h2>Difficultés rencontrées, résultats et prise de recul</h2>
+        <div class="summary-grid">
+          <div class="info-box">
+            <h3>Difficultés & Solutions</h3>
+            <p>
+              <strong>Difficulté :</strong> Gérer les différences de configuration entre plusieurs modèles de postes lors de l'automatisation.<br>
+              <strong>Solution :</strong> Ajout de contrôles préalables et d'un fichier de log pour identifier immédiatement une étape en échec.
+            </p>
+          </div>
+          <div class="info-box">
+            <h3>Résultats & Améliorations possibles</h3>
+            <p>
+              <strong>Résultat :</strong> Gain de temps sur chaque préparation et homogénéité des postes livrés.<br>
+              <strong>Amélioration :</strong> Centraliser les journaux de déploiement sur un partage réseau sécurisé ou coupler le déploiement à une solution serveur (MDT/WDS/FOG).
+            </p>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>BTS SIO Option SISR — Fiche de réalisation E5 (Stage 3)</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
