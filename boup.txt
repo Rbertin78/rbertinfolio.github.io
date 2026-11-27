@@ -4,7 +4,7 @@ le portfolio a été rush par IA, mais j'ai pas prévu de le laisser dans un ét
 cimer gémini, mais j'ai juste besoin de base, la suite, je sais le faire (lors que j'ai du temps)
 
 to do:	add les images
-        faire le portfolio meilleur
+        faire le portfolio meilleur (refaire le plan du site)
         dire merde au vibe code (il y a une personne qui full vibe code un jeu avec sa voix)
         corriger les erreur (comme tout projet vibe codé MDR) /ᐠ ╥ ˕ ╥マ
 
