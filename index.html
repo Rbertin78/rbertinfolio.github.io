@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio E5 — BTS SIO Option SISR</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="./index.html" class="brand">Portfolio E5 <span>• BTS SIO SISR</span></a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-list">
+          <li><a href="./index.html" class="active">Accueil & Réalisations</a></li>
+          <li><a href="./competences.html">Tableau C1–C6</a></li>
+          <li><a href="./veille.html">Veille & Projet Pro (C6)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="badge">Formation Initiale • Option SISR</span>
+      <h1>Support et mise à disposition de services informatiques</h1>
+      <p>
+        Bienvenue sur mon portfolio numérique conçu pour l'épreuve E5 du BTS SIO.
+        Vous y trouverez mon parcours, mes réalisations professionnelles (stages et ateliers)
+        ainsi que les preuves associées aux six compétences du bloc 1.
+      </p>
+      <div class="hero-meta">
+        <div><strong>Statut :</strong> Étudiant en formation initiale</div>
+        <div><strong>Domaine :</strong> Infrastructure, systèmes, réseaux & support</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Mes réalisations professionnelles</h2>
+        <p>Filtrez par compétence du bloc 1 pour accéder directement aux preuves :</p>
+      </div>
+
+      <div class="filter-bar" role="group" aria-label="Filtrer par compétence">
+        <button class="filter-btn active" data-filter="all">Toutes (4)</button>
+        <button class="filter-btn" data-filter="C1">C1 • Patrimoine</button>
+        <button class="filter-btn" data-filter="C2">C2 • Incidents & Demandes</button>
+        <button class="filter-btn" data-filter="C4">C4 • Mode Projet</button>
+        <button class="filter-btn" data-filter="C5">C5 • Mise à disposition</button>
+      </div>
+
+      <div class="cards-grid" id="realisations-grid">
+        <!-- Réalisation 3 (Page complète prête) -->
+        <article class="card" data-competences="C2 C4 C5">
+          <div class="card-top">
+            <span class="context-tag">Stage 3 • Entreprise</span>
+            <div class="comp-tags">
+              <span class="comp">C2</span>
+              <span class="comp">C4</span>
+              <span class="comp">C5</span>
+            </div>
+          </div>
+          <h3>Déploiement de postes, outil d'automatisation & suivi GLPI</h3>
+          <p>
+            Préparation et déploiement de postes utilisateurs, création d'un programme d'aide
+            au déploiement et traitement/suivi des tickets via GLPI.
+          </p>
+          <a href="./realisations/stage3-deploiement-glpi.html" class="btn">Consulter la fiche & les preuves →</a>
+        </article>
+
+        <!-- Réalisation 4 -->
+        <article class="card" data-competences="C1 C5">
+          <div class="card-top">
+            <span class="context-tag">Atelier École</span>
+            <div class="comp-tags">
+              <span class="comp">C1</span>
+              <span class="comp">C5</span>
+            </div>
+          </div>
+          <h3>Infrastructure d'entreprise (AD, DHCP, services réseau)</h3>
+          <p>
+            Conception et mise en place d'une infrastructure complète : Active Directory,
+            gestion des habilitations, attribution DHCP et tests de connectivité.
+          </p>
+          <a href="./realisations/ecole-infra-ad-dhcp.html" class="btn btn-outline">Fiche à compléter</a>
+        </article>
+
+        <!-- Réalisation 1 -->
+        <article class="card" data-competences="C1 C5">
+          <div class="card-top">
+            <span class="context-tag">Stage 1 • Entreprise</span>
+            <div class="comp-tags">
+              <span class="comp">C1</span>
+              <span class="comp">C5</span>
+            </div>
+          </div>
+          <h3>Script Batch (.bat) d'inventaire matériel et logiciel</h3>
+          <p>
+            Développement d'un script d'automatisation permettant de collecter rapidement
+            les caractéristiques des postes du parc informatique.
+          </p>
+          <a href="./realisations/stage1-inventaire-bat.html" class="btn btn-outline">Fiche à compléter</a>
+        </article>
+
+        <!-- Réalisation 2 -->
+        <article class="card" data-competences="C1 C2">
+          <div class="card-top">
+            <span class="context-tag">Stage 2 • Entreprise</span>
+            <div class="comp-tags">
+              <span class="comp">C1</span>
+              <span class="comp">C2</span>
+            </div>
+          </div>
+          <h3>Découverte VMware & upgrade / réinstallation complète d'un poste</h3>
+          <p>
+            Prise en main d'un environnement virtualisé VMware et remise en service complète
+            d'un poste portable après évolution matérielle (sauvegarde, OS, configuration).
+          </p>
+          <a href="./realisations/stage2-vmware-poste.html" class="btn btn-outline">Fiche à compléter</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>BTS SIO Option SISR — Dossier numérique E5 • Données anonymisées</p>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
