@@ -2,3 +2,7 @@ boup ! je suis un bloc note ¯\_(ツ)_/¯
 
 le portfolio a été rush par IA, mais j'ai pas prévu de le laisser dans un état aussi pitoyable.
 cimer gémini, mais j'ai juste besoin de base, la suite, je sais le faire (lors que j'ai du temps)
+
+to do:	add les images
+	    faire le portfolio meilleur
+    	dire merde au vibe code (il y a une personne qui full vibe code un jeu avec sa voix)
