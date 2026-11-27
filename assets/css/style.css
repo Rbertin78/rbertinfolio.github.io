@@ -386,3 +386,44 @@ pre {
   font-size: 0.88rem;
   text-align: center;
 }
+/* Tableau des compétences */
+.table-wrapper {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow-x: auto;
+}
+
+.comp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.93rem;
+}
+
+.comp-table th,
+.comp-table td {
+  padding: 0.95rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.comp-table th {
+  background: #f1f5f9;
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+.comp-table tr:last-child td {
+  border-bottom: none;
+}
+
+.comp-table a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.comp-table a:hover {
+  text-decoration: underline;
+}
