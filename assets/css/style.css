@@ -1,0 +1,388 @@
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --primary: #0369a1;
+  --primary-dark: #075985;
+  --accent: #0d9488;
+  --border: #e2e8f0;
+  --code-bg: #0f172a;
+  --code-text: #e2e8f0;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Header */
+.site-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+  gap: 1rem;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.brand span {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding-bottom: 0.25rem;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+}
+
+/* Hero */
+.hero {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.badge {
+  display: inline-block;
+  background: #e0f2fe;
+  color: var(--primary-dark);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+
+.hero h1 {
+  font-size: 1.75rem;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 72ch;
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.92rem;
+}
+
+/* Section & Filtres */
+.section {
+  margin-bottom: 3rem;
+}
+
+.section-head h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0.25rem;
+}
+
+.section-head p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter-btn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+.filter-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.filter-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+/* Cartes réalisations */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card.hidden {
+  display: none;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.context-tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.comp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.comp {
+  background: #f1f5f9;
+  color: var(--text);
+  border: 1px solid var(--border);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 6px;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 0.94rem;
+  margin-bottom: 1.2rem;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+}
+
+.btn:hover {
+  background: var(--primary-dark);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.btn-outline:hover {
+  background: #e0f2fe;
+}
+
+/* Fiche détaillée */
+.breadcrumb {
+  margin: 1.5rem 0 1rem;
+}
+
+.breadcrumb a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.fiche {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+.fiche-header {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.fiche-header h1 {
+  font-size: 1.6rem;
+  margin: 0.4rem 0 0.85rem;
+}
+
+.summary-grid,
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-box,
+.proof-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.15rem;
+}
+
+.info-box h3,
+.proof-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  color: var(--primary-dark);
+}
+
+.info-box ul,
+.checklist {
+  padding-left: 1.2rem;
+  font-size: 0.94rem;
+}
+
+.info-box li,
+.checklist li {
+  margin-bottom: 0.35rem;
+}
+
+.fiche-block {
+  margin-top: 1.75rem;
+}
+
+.fiche-block h2 {
+  font-size: 1.22rem;
+  margin-bottom: 0.85rem;
+}
+
+.steps-list {
+  padding-left: 1.3rem;
+}
+
+.steps-list li {
+  margin-bottom: 0.7rem;
+}
+
+.note {
+  background: #fef9c3;
+  border: 1px solid #fde047;
+  color: #854d0e;
+  padding: 0.65rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  margin-bottom: 1rem;
+}
+
+pre {
+  background: var(--code-bg);
+  color: var(--code-text);
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.placeholder-media {
+  background: #e2e8f0;
+  border: 2px dashed #94a3b8;
+  border-radius: 6px;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.88rem;
+  margin-bottom: 0.6rem;
+}
+
+.caption {
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  padding: 1.25rem 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  text-align: center;
+}
