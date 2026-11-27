@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stage 2 : VMware & Upgrade / Réinstallation poste — Portfolio E5</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand">Portfolio E5 <span>• BTS SIO SISR</span></a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-list">
+          <li><a href="../index.html">Accueil & Réalisations</a></li>
+          <li><a href="../competences.html">Tableau C1–C6</a></li>
+          <li><a href="../veille.html">Veille & Projet Pro (C6)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="../index.html">← Retour aux réalisations</a>
+    </nav>
+
+    <article class="fiche">
+      <header class="fiche-header">
+        <span class="context-tag">Stage 2 • Environnement professionnel & lien matériel perso</span>
+        <h1>Découverte de VMware et upgrade / réinstallation complète d'un poste</h1>
+        <div class="comp-tags">
+          <span class="comp">C1 • Gérer le patrimoine informatique</span>
+          <span class="comp">C2 • Répondre aux incidents et aux demandes</span>
+        </div>
+      </header>
+
+      <div class="summary-grid">
+        <div class="info-box">
+          <h3>1. Situer (Contexte)</h3>
+          <ul>
+            <li>Cadre : 2e stage de BTS SIO (SISR), complété par l'upgrade de mon PC portable</li>
+            <li>Problématique : comprendre l'environnement virtualisé VMware tout en fiabilisant un poste manquant de ressources pour faire tourner des machines virtuelles</li>
+            <li>Mon rôle exact : observation/prise en main de VMware, sauvegarde, upgrade matériel, réinstallation de l'OS et vérifications post-intervention</li>
+          </ul>
+        </div>
+        <div class="info-box">
+          <h3>2. Cadrer (Besoins & Outils)</h3>
+          <ul>
+            <li>Objectif : disposer d'un poste fiable et performant pour la virtualisation et valider les bonnes pratiques de remise en service</li>
+            <li>Contraintes : ne perdre aucune donnée utile, vérifier la compatibilité matérielle et respecter les délais de remise en état</li>
+            <li>Outils : VMware, supports d'installation OS, pilotes constructeurs, outils de sauvegarde et de vérification système</li>
+          </ul>
+        </div>
+      </div>
+
+      <section class="fiche-block">
+        <h2>Démarche et actions personnelles réalisées</h2>
+        <ol class="steps-list">
+          <li>
+            <strong>Découverte de VMware :</strong>
+            Prise en main de l'interface et du fonctionnement des machines virtuelles (allocation CPU/RAM/stockage, réseau virtuel, comportement des VM sous charge).
+          </li>
+          <li>
+            <strong>Sauvegarde préalable et diagnostic matériel :</strong>
+            Identification des limites matérielles (mémoire vive, stockage, lenteurs) et sauvegarde des données importantes avant toute intervention lourde.
+          </li>
+          <li>
+            <strong>Upgrade matériel et réinstallation complète :</strong>
+            Réalisation de l'évolution matérielle sur le poste, installation propre du système d'exploitation, installation des pilotes et mises à jour.
+          </li>
+          <li>
+            <strong>Tests et transfert d'expérience sur le stage :</strong>
+            Vérification du bon fonctionnement global du poste et application des enseignements sur l'allocation des ressources pour mieux faire tenir les VM en stage.
+          </li>
+        </ol>
+      </section>
+
+      <section class="fiche-block">
+        <h2>Preuves et éléments techniques (anonymisés)</h2>
+        <p class="note">
+          Remplace les éléments d'exemple ci-dessous par tes propres captures (gestionnaire des tâches/VMware, checklist de réinstallation) après avoir masqué toute information personnelle ou sensible.
+        </p>
+
+        <div class="proof-grid">
+          <div class="proof-card">
+            <h3>Preuve 1 — Checklist de sauvegarde, upgrade et remise en service (C1 / C2)</h3>
+            <ul class="checklist">
+              <li>Sauvegarde vérifiée des fichiers et configurations utiles avant intervention</li>
+              <li>Vérification de la prise en compte des composants upgradés (RAM / stockage)</li>
+              <li>Installation de l'OS, des pilotes et des mises à jour de sécurité</li>
+              <li>Tests de stabilité et lancement de machines virtuelles sans saturation</li>
+            </ul>
+          </div>
+
+          <div class="proof-card">
+            <h3>Preuve 2 — Observation & ressources VMware (C1 / C2)</h3>
+            <div class="placeholder-media" data-preview="Capture VMware / ressources système (à ajouter dans ../assets/img/captures/)">
+              <span>Emplacement capture : <code>../assets/img/captures/stage2-vmware-ressources.png</code></span>
+            </div>
+            <p class="caption">Illustration de l'allocation des ressources et du comportement des VM après optimisation matérielle.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="fiche-block">
+        <h2>Difficultés rencontrées, résultats et prise de recul</h2>
+        <div class="summary-grid">
+          <div class="info-box">
+            <h3>Difficultés & Solutions</h3>
+            <p>
+              <strong>Difficulté :</strong> Sur-allocation ou manque de RAM/ressources qui ralentit le poste hôte et les VM.<br>
+              <strong>Solution :</strong> Dimensionner plus rigoureusement les ressources attribuées aux VM et vérifier la charge réelle plutôt que de pousser les curseurs au maximum.
+            </p>
+          </div>
+          <div class="info-box">
+            <h3>Résultats & Améliorations possibles</h3>
+            <p>
+              <strong>Résultat :</strong> Poste réactif, réinstallation propre et meilleure tenue des VM.<br>
+              <strong>Amélioration :</strong> Formaliser une fiche de contrôle systématique (avant/après) avec mesure des temps de démarrage et de charge.
+            </p>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>BTS SIO Option SISR — Fiche de réalisation E5 (Stage 2)</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
