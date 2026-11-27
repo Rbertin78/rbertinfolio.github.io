@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stage 1 : Script Batch (.bat) d'inventaire — Portfolio E5</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand">Portfolio E5 <span>• BTS SIO SISR</span></a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-list">
+          <li><a href="../index.html">Accueil & Réalisations</a></li>
+          <li><a href="../competences.html">Tableau C1–C6</a></li>
+          <li><a href="../veille.html">Veille & Projet Pro (C6)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="../index.html">← Retour aux réalisations</a>
+    </nav>
+
+    <article class="fiche">
+      <header class="fiche-header">
+        <span class="context-tag">Stage 1 • Environnement professionnel</span>
+        <h1>Codage d'un script Batch (.bat) pour aider à l'inventaire</h1>
+        <div class="comp-tags">
+          <span class="comp">C1 • Gérer le patrimoine informatique</span>
+          <span class="comp">C5 • Mettre à disposition un service</span>
+        </div>
+      </header>
+
+      <div class="summary-grid">
+        <div class="info-box">
+          <h3>1. Situer (Contexte)</h3>
+          <ul>
+            <li>Cadre : 1er stage de BTS SIO (SISR)</li>
+            <li>Problématique : faciliter et accélérer le recensement d'informations techniques sur les postes afin d'alimenter l'inventaire</li>
+            <li>Mon rôle exact : conception et écriture du script Batch, tests d'exécution et mise à disposition d'un résultat exploitable</li>
+          </ul>
+        </div>
+        <div class="info-box">
+          <h3>2. Cadrer (Besoins & Outils)</h3>
+          <ul>
+            <li>Objectif : obtenir rapidement des informations clés du poste sans devoir tout chercher manuellement dans l'interface</li>
+            <li>Contraintes : exécution simple sous Windows, lisibilité des sorties, absence de données sensibles non maîtrisées</li>
+            <li>Outils : script Batch (`.bat`), commandes système Windows (`hostname`, `systeminfo`, `ipconfig`, `wmic` ou équivalent selon version)</li>
+          </ul>
+        </div>
+      </div>
+
+      <section class="fiche-block">
+        <h2>Démarche et actions personnelles réalisées</h2>
+        <ol class="steps-list">
+          <li>
+            <strong>Identification des informations utiles à l'inventaire :</strong>
+            Définition des données pertinentes à collecter sur un poste (nom de machine, système/version, composants matériels ou paramètres réseau de base).
+          </li>
+          <li>
+            <strong>Écriture du script en Batch :</strong>
+            Structuration du fichier `.bat` avec des messages d'avancement clairs et une exportation des résultats dans un fichier texte/rapport pour faciliter la lecture.
+          </li>
+          <li>
+            <strong>Tests et ajustements :</strong>
+            Exécution du script sur des postes de test, vérification des droits nécessaires et correction des erreurs d'affichage ou de chemin.
+          </li>
+          <li>
+            <strong>Mise à disposition et explication d'usage :</strong>
+            Présentation du fonctionnement du script et de la manière de récupérer les informations collectées.
+          </li>
+        </ol>
+      </section>
+
+      <section class="fiche-block">
+        <h2>Preuves et éléments techniques (anonymisés)</h2>
+        <p class="note">
+          Remplace cet extrait d'exemple par ton propre script nettoyé (sans noms d'utilisateurs réels, adresses IP ou chemins internes sensibles) et ajoute un exemple de sortie anonymisé.
+        </p>
+
+        <div class="proof-card">
+          <h3>Preuve 1 — Extrait de script d'aide à l'inventaire (C1 / C5)</h3>
+          <pre><code>@echo off
+title Collecte inventaire poste - Exemple anonymise
+set "DOSSIER_SORTIE=%~dp0rapports"
+if not exist "%DOSSIER_SORTIE%" mkdir "%DOSSIER_SORTIE%"
+
+set "FICHIER=%DOSSIER_SORTIE%\inventaire_%COMPUTERNAME%.txt"
+echo === INVENTAIRE POSTE : %COMPUTERNAME% === > "%FICHIER%"
+echo Date : %date% %time% >> "%FICHIER%"
+echo. >> "%FICHIER%"
+
+echo --- Systeme --- >> "%FICHIER%"
+systeminfo | findstr /B /C:"Nom du systeme" /C:"Version du systeme" /C:"Memoire physique totale" >> "%FICHIER%"
+
+echo --- Reseau --- >> "%FICHIER%"
+ipconfig /all | findstr /C:"Description" /C:"Adresse IPv4" /C:"Adresse physique" >> "%FICHIER%"
+
+echo Inventaire enregistre dans : %FICHIER%
+pause</code></pre>
+        </div>
+
+        <div class="proof-grid">
+          <div class="proof-card">
+            <h3>Preuve 2 — Extrait de sortie / capture anonymisée (C1)</h3>
+            <div class="placeholder-media" data-preview="Capture ou extrait de sortie (à ajouter dans ../assets/img/captures/)">
+              <span>Emplacement capture : <code>../assets/img/captures/stage1-inventaire-sortie.png</code></span>
+            </div>
+            <p class="caption">Exemple de rapport généré après anonymisation des noms de machines, adresses MAC et IP.</p>
+          </div>
+
+          <div class="proof-card">
+            <h3>Preuve 3 — Points de contrôle vérifiés (C5)</h3>
+            <ul class="checklist">
+              <li>Création automatique du dossier de sortie sans erreur</li>
+              <li>Données collectées lisibles et regroupées par poste</li>
+              <li>Anonymisation vérifiée avant intégration au portfolio</li>
+              <li>Capacité à expliquer chaque commande utilisée à l'oral</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="fiche-block">
+        <h2>Difficultés rencontrées, résultats et prise de recul</h2>
+        <div class="summary-grid">
+          <div class="info-box">
+            <h3>Difficultés & Solutions</h3>
+            <p>
+              <strong>Difficulté :</strong> La syntaxe Batch et les différences de sortie selon la langue ou la version de Windows peuvent provoquer des lignes vides ou des erreurs de filtre.<br>
+              <strong>Solution :</strong> Tester le script sur plusieurs environnements et simplifier les filtres pour garder des sorties fiables.
+            </p>
+          </div>
+          <div class="info-box">
+            <h3>Résultats & Améliorations possibles</h3>
+            <p>
+              <strong>Résultat :</strong> Un outil léger et rapide pour aider à la collecte d'informations d'inventaire.<br>
+              <strong>Amélioration :</strong> Faire évoluer le script vers PowerShell (objets structurés, export CSV plus propre) et gérer les cas où certaines commandes sont obsolètes.
+            </p>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>BTS SIO Option SISR — Fiche de réalisation E5 (Stage 1)</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

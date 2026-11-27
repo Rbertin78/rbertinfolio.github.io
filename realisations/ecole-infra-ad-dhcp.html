@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atelier École : Infrastructure d'entreprise (AD, DHCP) — Portfolio E5</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand">Portfolio E5 <span>• BTS SIO SISR</span></a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-list">
+          <li><a href="../index.html">Accueil & Réalisations</a></li>
+          <li><a href="../competences.html">Tableau C1–C6</a></li>
+          <li><a href="../veille.html">Veille & Projet Pro (C6)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="../index.html">← Retour aux réalisations</a>
+    </nav>
+
+    <article class="fiche">
+      <header class="fiche-header">
+        <span class="context-tag">Atelier École • Infrastructure système & réseau</span>
+        <h1>Création d'une infrastructure d'entreprise (Active Directory, DHCP, services associés)</h1>
+        <div class="comp-tags">
+          <span class="comp">C1 • Gérer le patrimoine informatique</span>
+          <span class="comp">C5 • Mettre à disposition un service</span>
+        </div>
+      </header>
+
+      <div class="summary-grid">
+        <div class="info-box">
+          <h3>1. Situer (Contexte)</h3>
+          <ul>
+            <li>Cadre : atelier / projet réalisé à l'école en option SISR</li>
+            <li>Problématique : mettre en place les services de base d'un réseau d'entreprise (adressage IP, annuaire, gestion des comptes/accès) et valider leur bon fonctionnement</li>
+            <li>Mon rôle exact : configuration des services dont j'avais la charge, tests de connexion et vérification de la cohérence de l'infrastructure</li>
+          </ul>
+        </div>
+        <div class="info-box">
+          <h3>2. Cadrer (Besoins & Outils)</h3>
+          <ul>
+            <li>Objectif : fournir un adressage IP fiable et une gestion centralisée des identités et droits sur le périmètre défini</li>
+            <li>Contraintes : cohérence du plan d'adressage, résolution de noms, sécurité/droits d'accès, distinction claire de mon travail en cas de binôme/groupe</li>
+            <li>Outils : machines virtuelles, serveur (ex. Windows Server), rôle Active Directory (AD DS), service DHCP, DNS, postes clients de test</li>
+          </ul>
+        </div>
+      </div>
+
+      <section class="fiche-block">
+        <h2>Démarche et actions personnelles réalisées</h2>
+        <ol class="steps-list">
+          <li>
+            <strong>Préparation de l'environnement et de l'adressage :</strong>
+            Définition du plan d'adressage IP, configuration réseau du serveur et vérification de la connectivité entre serveurs et postes clients.
+          </li>
+          <li>
+            <strong>Mise en place et configuration du service DHCP :</strong>
+            Installation du rôle DHCP, création de l'étendue (plage d'adresses, masque, passerelle, DNS, bail) et test d'attribution automatique aux postes clients.
+          </li>
+          <li>
+            <strong>Déploiement d'Active Directory et gestion des habilitations :</strong>
+            Mise en place du domaine / annuaire, structuration des unités d'organisation (OU), création d'utilisateurs/groupes et application des droits/stratégies prévues.
+          </li>
+          <li>
+            <strong>Tests et validation du service :</strong>
+            Jonction de postes au domaine, vérification de l'obtention d'adresse IP et de la résolution DNS, tests d'ouverture de session et contrôle des accès.
+          </li>
+        </ol>
+      </section>
+
+      <section class="fiche-block">
+        <h2>Preuves et éléments techniques (anonymisés)</h2>
+        <p class="note">
+          Ajoute ici ton schéma d'architecture réseau et des captures de configuration/test (étendue DHCP, arborescence AD, commande <code>ipconfig /all</code> ou test de résolution/connexion).
+        </p>
+
+        <div class="proof-grid">
+          <div class="proof-card">
+            <h3>Preuve 1 — Schéma d'architecture de l'infrastructure (C1 / C5)</h3>
+            <div class="placeholder-media" data-preview="Schéma réseau (à ajouter dans ../assets/img/schemas/)">
+              <span>Emplacement schéma : <code>../assets/img/schemas/ecole-infra-ad-dhcp.png</code></span>
+            </div>
+            <p class="caption">Vue d'ensemble des serveurs, services (AD, DHCP, DNS) et postes clients avec l'adressage associé.</p>
+          </div>
+
+          <div class="proof-card">
+            <h3>Preuve 2 — Capture de configuration ou test client (C5)</h3>
+            <div class="placeholder-media" data-preview="Capture test DHCP / AD (à ajouter dans ../assets/img/captures/)">
+              <span>Emplacement capture : <code>../assets/img/captures/ecole-test-dhcp-ad.png</code></span>
+            </div>
+            <p class="caption">Vérification côté client ou serveur (bail DHCP attribué, résolution de nom, accès au domaine).</p>
+          </div>
+        </div>
+
+        <div class="proof-card">
+          <h3>Preuve 3 — Commandes de vérification utilisées lors des tests (C5)</h3>
+          <pre><code># Côté poste client Windows : vérifier l'IP, le bail DHCP, la passerelle et les serveurs DNS
+ipconfig /all
+
+# Forcer le renouvellement du bail DHCP si besoin
+ipconfig /release
+ipconfig /renew
+
+# Vérifier la résolution de nom vers le contrôleur de domaine / services
+nslookup nom-du-domaine.local</code></pre>
+        </div>
+      </section>
+
+      <section class="fiche-block">
+        <h2>Difficultés rencontrées, résultats et prise de recul</h2>
+        <div class="summary-grid">
+          <div class="info-box">
+            <h3>Difficultés & Solutions</h3>
+            <p>
+              <strong>Difficulté :</strong> Un mauvais paramétrage DNS ou d'adressage IP empêche un poste client de joindre le domaine ou de résoudre les noms correctement.<br>
+              <strong>Solution :</strong> Vérifier étape par étape la configuration IP statique du serveur, la zone DNS associée et l'étendue DHCP avant de retester la jonction.
+            </p>
+          </div>
+          <div class="info-box">
+            <h3>Résultats & Améliorations possibles</h3>
+            <p>
+              <strong>Résultat :</strong> Infrastructure fonctionnelle permettant l'attribution d'adresses IP et la gestion centralisée des comptes/accès sur le périmètre testé.<br>
+              <strong>Amélioration :</strong> Ajouter de la redondance (second contrôleur de domaine / haute disponibilité DHCP), affiner les GPO et documenter davantage la reprise après incident.
+            </p>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>BTS SIO Option SISR — Fiche de réalisation E5 (Atelier École)</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
